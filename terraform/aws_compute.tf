@@ -45,8 +45,8 @@ resource "aws_eip" "aws-ip" {
 resource "aws_instance" "aws-vm" {
   ami           = "${data.aws_ami.ubuntu.id}"
   instance_type = "${var.aws_instance_type}"
-  subnet_id     = "${aws_subnet.aws-subnet1.id}"
-  key_name      = "vm-ssh-key"
+  subnet_id     = "${var.aws_subnet_id}"
+  key_name      = "FDT_test"
 
   associate_public_ip_address = true
   private_ip = "${var.aws_vm_address}"
