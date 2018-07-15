@@ -41,7 +41,7 @@ resource "google_compute_instance" "gcp-vm" {
   }
 
   network_interface {
-    subnetwork = "${google_compute_subnetwork.gcp-subnet1.name}"
+    subnetwork = "${var.gcp_subnet1_name}"
     address = "${var.gcp_vm_address}"
 
     access_config {
