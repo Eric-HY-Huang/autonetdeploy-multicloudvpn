@@ -31,7 +31,7 @@ variable "gcp_project_id" {
 
 variable gcp_region {
   description = "Default to Oregon region."
-  default = "us-west1"
+  default = "europe-west1"
 }
 
 variable gcp_instance_type {
@@ -44,17 +44,21 @@ variable gcp_disk_image {
   default = "projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts"
 }
 
-variable gcp_network_cidr {
-  default = "10.240.0.0/16"
+variable gcp_network_name {
+  default = "datalab-network"
+}
+
+variable gcp_subnet1_name {
+  default = "datalab-network"
 }
 
 variable gcp_subnet1_cidr {
-  default = "10.240.0.0/24"
+  default = ""
 }
 
 variable gcp_vm_address {
   description = "Private IP address for GCP VM instance."
-  default = "10.240.0.100"
+  default = "10.132.0.100"
 }
 
 variable GCP_TUN1_VPN_GW_ASN {

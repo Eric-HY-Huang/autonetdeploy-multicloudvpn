@@ -25,8 +25,8 @@ variable aws_credentials_file_path {
 }
 
 variable aws_region {
-  description = "Default to Oregon region."
-  default = "us-west-2"
+  description = "Default to Ireland region."
+  default = "eu-west-1"
 }
 
 variable aws_instance_type {
@@ -39,17 +39,32 @@ variable aws_disk_image {
   default = "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"
 }
 
-variable aws_network_cidr {
-  description = "VPC network ip block."
-  default = "172.16.0.0/16"
-}
-
+//variable aws_network_cidr {
+//  description = "VPC network ip block."
+//  default = "172.16.0.0/16"
+//}
+//
 variable aws_subnet1_cidr {
   description = "Subset block from VPC network ip block."
-  default = "172.16.0.0/24"
+  default = ""
+}
+
+variable aws_vpc_id {
+  description = "VPC id."
+  default = ""
+}
+
+variable aws_igw_id {
+  description = "igw id."
+  default = ""
+}
+
+variable aws_subnet_id {
+  description = "subnet id."
+  default = ""
 }
 
 variable aws_vm_address {
   description = "Private IP address for AWS VM instance."
-  default = "172.16.0.100"
+  default = "172.31.13.100"
 }
